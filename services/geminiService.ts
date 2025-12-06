@@ -4,8 +4,9 @@ import { ImageGenerationSettings } from "../types";
 
 // Helper to get client with current key
 const getClient = () => {
+  // The API key must be obtained exclusively from the environment variable process.env.API_KEY
   const apiKey = process.env.API_KEY;
-  if (!apiKey) throw new Error("API Key not found");
+  if (!apiKey) throw new Error("API Key not found. Please add API_KEY to your environment variables.");
   return new GoogleGenAI({ apiKey });
 };
 

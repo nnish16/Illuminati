@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0c0a09; /* stone-950 */
+  color: #e7e5e4; /* stone-200 */
+}
+
+.medieval-font {
+  font-family: 'Cinzel', serif;
+}
+
+.scroll-bar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.parchment-glow {
+  box-shadow: 0 0 50px rgba(251, 191, 36, 0.1);
+}
+
+/* Custom Keyframes */
+@keyframes spin-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes spin-reverse-slower {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes float-up {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: var(--opacity); }
+  90% { opacity: var(--opacity); }
+  100% { transform: translateY(-10vh) translateX(20px); opacity: 0; }
+}
+
+@keyframes fog-drift {
+  0% { transform: translateX(-10%); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateX(-10%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes unroll {
+  0% { transform: scaleY(0); opacity: 0; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: translateY(-50%) scale(0.9); filter: blur(4px); }
+  100% { opacity: 1; transform: translateY(-50%) scale(1); filter: blur(0px); }
+}
+
+.animate-spin-slow { animation: spin-slow 180s linear infinite; }
+.animate-spin-reverse { animation: spin-reverse-slower 240s linear infinite; }
+.animate-float { animation: float-up linear infinite; }
+.animate-fog { animation: fog-drift 20s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 8s ease-in-out infinite; }
+.animate-unroll { animation: unroll 0.5s ease-out forwards; }
+.animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+.animate-fade-in-up { animation: fade-in-up 0.7s ease-out forwards; }
+.animate-pop-in { animation: pop-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
