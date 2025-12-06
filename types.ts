@@ -5,7 +5,6 @@ export interface CouncilMember {
   description: string;
   color: string;
   icon: string; // Lucide icon name
-  modelId: string; // OpenRouter Model ID
 }
 
 export interface CouncilMessage {

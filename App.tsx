@@ -274,10 +274,15 @@ const App: React.FC = () => {
              </svg>
           </div>
 
-          {/* Title */}
+          {/* Title - Fixed Visibility using Inline Block + Individual Gradients */}
           <h1 className="text-center medieval-font font-bold tracking-widest drop-shadow-2xl py-4">
+            {/* Taller First Letter */}
             <span className="inline-block text-7xl md:text-9xl bg-gradient-to-b from-stone-100 to-stone-600 text-transparent bg-clip-text leading-none">I</span>
+            
+            {/* Middle Letters */}
             <span className="inline-block text-5xl md:text-7xl bg-gradient-to-b from-stone-100 to-stone-600 text-transparent bg-clip-text px-1 leading-none">LLUMINAT</span>
+            
+            {/* Taller Last Letter */}
             <span className="inline-block text-7xl md:text-9xl bg-gradient-to-b from-stone-100 to-stone-600 text-transparent bg-clip-text leading-none">I</span>
           </h1>
           
@@ -341,13 +346,6 @@ const App: React.FC = () => {
               )}
             </button>
           </form>
-          
-          {/* Status Text below input - Updated for Multi-Model */}
-          {!isSending && !guardRejection && (
-              <div className={`absolute -bottom-8 left-0 right-0 text-center text-stone-600 text-xs tracking-widest uppercase opacity-60 transition-opacity duration-300 ${isThinking ? 'opacity-100' : 'opacity-0'}`}>
-                 {isThinking ? "Consulting Multiple Models..." : ""}
-              </div>
-          )}
         </div>
 
       </div>
