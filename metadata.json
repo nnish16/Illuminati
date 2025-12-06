@@ -1,0 +1,5 @@
+{
+  "name": "The Council of Intelligence",
+  "description": "A medieval-themed interface where a council of AI personas debates your queries before rendering a verdict, utilizing Gemini 3 Pro Thinking model.",
+  "requestFramePermissions": []
+}
